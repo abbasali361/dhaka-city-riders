@@ -1,0 +1,50 @@
+.logo{
+    height: 50px;
+    width: 120px;
+}
+.title-container{
+    color: #1774ddb2;
+    text-align: center;
+    font-size: 2em;
+   
+}
+.nav{
+    margin-left: 200px;
+}
+.nav li{
+    display: inline;
+    margin-left: 50px;
+  }
+  
+  .nav a{
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+  }
+  .nav li a:hover{
+      color:red;
+      border-color:blue;
+  }
+  .btn-book{
+      font-size:20px;
+      background:rgb(237, 241, 237);
+  }
+  @media only screen and (max-width: 600px) {
+    .title-container {
+        width: 100%;
+        height: auto;
+    }
+    .nav{
+        
+    }
+    .nav li{
+        display: inline;
+        margin-left: 50px;
+      }
+      
+      .nav a{
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+      }
+  }
