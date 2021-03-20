@@ -42,7 +42,7 @@ export default function Cart({rider}){
         <IconButton>
           <h3>{rider.title}</h3>
         </IconButton>
-        <Button onClick={() => handleBook(rider.bedType)} variant="contained" color="primary"> Choice</Button>
+        <Button onClick={() => handleBook(rider.bedType,rider.imgUrl)} variant="contained" color="primary"> Choice</Button>
       </CardActions>
     </Card>
   );
