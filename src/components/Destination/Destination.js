@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router";
 import { Link } from 'react-router-dom';
+import Direction from '../Map/Direction';
 import ridersData from './fakeData';
 
 const Destination = () => {
@@ -23,7 +24,9 @@ const Destination = () => {
         <img style={styles} src={imgUrl} alt=""/>
         <p>Want a <Link to="/home">different rider?</Link> </p>
       </div>
-     
+     <div>
+       <Direction></Direction>
+     </div>
     </div>
   );
 };
