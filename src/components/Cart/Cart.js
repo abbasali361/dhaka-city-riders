@@ -9,11 +9,13 @@ import { useHistory } from 'react-router-dom';
 import './Cart.css';
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    width: 300,
+    borderRadius:15
+    
   },
   media: {
-    height: 0,
-    paddingTop: '50%', 
+    height: 80,
+    paddingTop: '50%',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -25,25 +27,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Cart({rider}){
+export default function Cart(props) {
+  const {bedType, imgUrl,title}=props.rider;
   const classes = useStyles();
   const history = useHistory()
-    const handleBook = (bedType) => {
-        history.push(`/book/${bedType}`);
-    }
+  const handleBook = (bedType) => {
+    history.push(`/destination/${bedType}`);
+  }
   return (
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image={rider.imgUrl}
-        title="Paella dish"
+        image={imgUrl}
       />
       <CardActions disableSpacing>
         <IconButton>
-          <h3>{rider.title}</h3>
+          <h3>{title}</h3>
         </IconButton>
-        <Button onClick={() => handleBook(rider.bedType,rider.imgUrl)} variant="contained" color="primary"> Choice</Button>
+        <Button onClick={() => handleBook(bedType)} variant="contained" color="primary"> Choice</Button>
       </CardActions>
     </Card>
   );
-}
+};

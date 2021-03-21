@@ -33,14 +33,14 @@ function App() {
               <Home></Home>
               </Login>
             </Route>
-            <PrivateRoute path="/book/:bedType">
-              <Book></Book>
+            <PrivateRoute path="/destination/:bedType">
+            <Destination></Destination>
             </PrivateRoute>
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/destination">
-              {/* <Destination></Destination> */}
+            <Route path="/destination">
+              <Destination></Destination>
             </Route>
           </Switch>
       </Router>

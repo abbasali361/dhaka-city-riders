@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import  firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
@@ -32,10 +32,10 @@ const Login = () => {
     return (
         <div className="login-button">
             <h1>This is Login</h1>
-            <input type="text" name="name" placeholder="Enter Your name" required /> 
-        <br />
-        <input type="email" name="email" placeholder="Enter Your Email" required />
-        <br/>
+            <input type="text" name="name" placeholder="Enter Your name" required />
+            <br />
+            <input type="email" name="email" placeholder="Enter Your Email" required />
+            <br />
             <button onClick={handleGoogleSignIn}>Google Sign in</button>
         </div>
     );
@@ -49,6 +49,8 @@ export default Login;
 // import "firebase/auth";
 // import firebaseConfig from "./firebase.config";
 // import './Login.css';
+// // import  Book  from './Book/Book';
+
 
 // firebase.initializeApp(firebaseConfig);
 
@@ -165,8 +167,6 @@ export default Login;
 //       )}
 //       {user.isSigned && <h1>{user.name}</h1>}
 //       <img src={user.photo} alt=""/>
-
-//       <h1>Our Own Authentication</h1>
 //       <form onSubmit={handleSubmit}>
 //         <input
 //           type="checkbox"
@@ -183,12 +183,11 @@ export default Login;
 //         <br />
 //         <input type="password" onBlur={handleBlur} name="password" placeholder="Enter Your Password" required />
 //         <br />
-//         <input type="submit" value="Submit" />
+//         <h3>Please Create Yur Account</h3>
 //       </form>
-//       <h1 style={{ color: "red" }}>{user.error}</h1>
-//       {user.success && (
-//         <h1 style={{ color: "green" }}>
-//           Account {newUser ? "Created" : "Logged In "} Successfully </h1> )}
+//       <div className="col-md-6 pb-5">
+//           {/* <Book></Book> */}
+//         </div>
 //     </div>
 //   );
 // }
